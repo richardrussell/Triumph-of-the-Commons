@@ -1,8 +1,21 @@
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+	<title>Triumph of the Commons</title>
 </head>
-  <body>
+<body>
+<div id="title">Triumph of the Commons</div>
+<div id="subtitle">Making things better, one action at a time</div>
+
+<div id="action">
+	<div id="byline">At TIME, DATE, USER did:</div>
+	<div id="description">DESCRIPTION</div>
+	<div id="evidence">EVIDENCE</div>
+	
+	
+</div>
+
+<div id="greeting">
     {% for greeting in greetings %}
       {% if greeting.author %}
         <b>{{ greeting.author.nickname }}</b> wrote:
@@ -18,6 +31,6 @@
     </form>
 
     <a href="{{ url }}">{{ url_linktext }}</a>
-
-  </body>
+</div>
+</body>
 </html>
