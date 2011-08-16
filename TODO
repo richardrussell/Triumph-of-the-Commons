@@ -1,0 +1,11 @@
+- Create index.html with basic framework of site - no layout, just content
+	- Split into component parts (header, sidebar, content template, etc)
+- Create FB User Signon
+	- Investigate Twitter, Google etc Signon also
+	- OAuth 2.0?
+- Create basic data model
+	- Users (integrate with FB users)
+	- City
+	- Entry
+		- Photos
+		- Action Type
