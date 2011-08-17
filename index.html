@@ -7,24 +7,26 @@
 <div id="title">Triumph of the Commons</div>
 <div id="subtitle">Making things better, one action at a time</div>
 
-<div id="action">
-	<div id="byline">At TIME, DATE, USER did:</div>
-	<div id="description">DESCRIPTION</div>
-	<div id="evidence">EVIDENCE</div>
-	
-	
-</div>
+<div id="actions">
 
-<div id="greeting">
     {% for greeting in greetings %}
+	<div id="action">
       {% if greeting.author %}
-        <b>{{ greeting.author.nickname }}</b> wrote:
+		<div id="byline">At TIME, DATE, {{ greeting.author.nickname }} did:</div>
       {% else %}
         An anonymous person wrote:
       {% endif %}
       <blockquote>{{ greeting.content|escape }}</blockquote>
+	  <div id="description">DESCRIPTION</div>
+	  <div id="evidence">EVIDENCE</div>
+	</div>
     {% endfor %}
 
+	
+	
+</div>
+
+<div id="form">
     <form action="/sign" method="post">
       <div><textarea name="content" rows="3" cols="60"></textarea></div>
       <div><input type="submit" value="Sign Guestbook"></div>
